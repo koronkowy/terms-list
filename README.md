@@ -1,5 +1,7 @@
 <img width="1724" alt="Screenshot 2024-09-05 at 6 12 56 AM" src="https://github.com/user-attachments/assets/5d6c51a1-8940-48cb-a6eb-220ae8c5475a">
 
+Location: https://koronkowy.github.io/terms-list/index.html
+
 terms-list
 ========
 
