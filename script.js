@@ -290,7 +290,6 @@ const terms = [
     { term: 'Hashing', description: 'The process of converting data into a fixed-size string of characters to verify data integrity. Hashing is commonly used in cryptography and data verification.' },
     { term: 'SHA (Secure Hash Algorithm)', description: 'A family of cryptographic hash functions designed to ensure data integrity. The most common versions include SHA-1, SHA-256, and SHA-512.' },
     { term: 'HMAC (Hashed Message Authentication Code)', description: 'A message authentication code that uses a cryptographic hash function and a secret key to verify both the data integrity and the authenticity of a message.' },
-    { term: 'CA (Certificate Authority)', description: 'An entity within a Public Key Infrastructure (PKI) responsible for issuing, managing, and revoking digital certificates.' },
     { term: 'Precomputed Hash Attack', description: 'A cryptographic attack where an attacker uses precomputed tables of hash values, such as rainbow tables, to reverse-engineer the original input data.' },
     { term: 'Rainbow Table', description: 'A precomputed table containing hash values for common passwords, used by attackers to reverse-engineer the original plaintext from a hash value.' },
     { term: 'DRPs (Disaster Recovery Plans)', description: 'Plans that outline how an organization will recover and restore operations after a major incident or disaster, such as a natural disaster, significant system failure, or a security breach. The focus is on minimizing downtime and returning to normal operations.' },
