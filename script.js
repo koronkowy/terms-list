@@ -1,5 +1,6 @@
 const terms = [
     { term: 'Impersonation', description: 'Impersonation is a social engineering attack where an attacker pretends to be someone else, often a trusted individual or authority figure, to deceive a victim into revealing sensitive information or performing actions that compromise security.' },
+    { term: 'Log Analysis', description: 'The process of reviewing and interpreting log data from systems and networks to identify potential security incidents.' },
     { term: 'Zero-day attack', description: 'A Zero-day attack is a type of cyber attack where an attacker exploits a previously unknown software vulnerability. This vulnerability has not been patched or addressed by the software vendor, making it particularly dangerous since no defenses are yet available.' },
     { term: 'Buffer Overflow', description: 'A Buffer Overflow is a vulnerability that occurs when a program writes more data to a buffer (a temporary storage area) than it can hold. This can lead to the execution of arbitrary code with the same privileges as the running application, allowing attackers to potentially take control of the system.' },
     { term: 'Privilege Escalation', description: 'Privilege Escalation is an attack where an attacker gains higher access rights or privileges than they are supposed to have. This can occur through the exploitation of vulnerabilities or misconfigurations in a system, allowing the attacker to perform unauthorized actions.' },
@@ -416,30 +417,44 @@ const terms = [
     { term: 'IoC', description: 'Indicators of Compromise are pieces of evidence or data that suggest a system has been breached or attacked.' },
     { term: 'FAIR (Factor Analysis of Information Risk)', description: 'A framework for quantifying cybersecurity risks in financial terms, helping organizations assess and manage risks.' },
     { term: 'Timeline Analysis', description: 'A method of reviewing and organizing events in chronological order to understand an attack or incident.' },
-    { term: 'Pattern Recognition', description: 'The identification of patterns or trends in data, often used in threat detection or security analysis.' },
-    { term: 'Log Analysis', description: 'The process of reviewing and interpreting log data from systems and networks to identify potential security incidents.' },    
-     
+    { term: 'Pattern Recognition', description: 'The identification of patterns or trends in data, often used in threat detection or security analysis.' },     
     // Add new terms here in any order
 ];
 
 const termContainer = document.getElementById('terms');
+const searchBar = document.getElementById('searchBar');
 
 // Sort terms alphabetically by the 'term' property
 terms.sort((a, b) => a.term.localeCompare(b.term));
 
-// Display sorted terms
-terms.forEach(item => {
-    const termDiv = document.createElement('div');
-    termDiv.classList.add('term-item');
+// Function to display terms
+function displayTerms(filteredTerms) {
+    termContainer.innerHTML = ''; // Clear existing terms
+    filteredTerms.forEach(item => {
+        const termDiv = document.createElement('div');
+        termDiv.classList.add('term-item');
 
-    const termTitle = document.createElement('h2');
-    termTitle.textContent = item.term;
+        const termTitle = document.createElement('h2');
+        termTitle.textContent = item.term;
 
-    const termDescription = document.createElement('p');
-    termDescription.textContent = item.description;
+        const termDescription = document.createElement('p');
+        termDescription.textContent = item.description;
 
-    termDiv.appendChild(termTitle);
-    termDiv.appendChild(termDescription);
+        termDiv.appendChild(termTitle);
+        termDiv.appendChild(termDescription);
 
-    termContainer.appendChild(termDiv);
+        termContainer.appendChild(termDiv);
+    });
+}
+
+// Initial display of all terms
+displayTerms(terms);
+
+// Event listener for search input
+searchBar.addEventListener('input', (event) => {
+    const query = event.target.value.toLowerCase();
+    const filteredTerms = terms.filter(item => 
+        item.term.toLowerCase().includes(query)
+    );
+    displayTerms(filteredTerms); // Display only terms that match the search query
 });
