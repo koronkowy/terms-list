@@ -24,13 +24,14 @@ body {
 h1 {
     text-align: center;
     margin-top: 0;
+    font-size: 1.8em;
 }
 
 /* Subheading styling */
 .subheading {
     font-size: 0.9em;
     text-align: center;
-    margin: 10px 0 20px;
+    margin: 10px 0 15px;
     color: #555;
 }
 
@@ -47,24 +48,24 @@ h1 {
 #searchBar {
     width: 100%;
     padding: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: Consolas, monospace;
     font-size: 10pt;
 }
 
+/* Terms container styling */
 #terms {
-    margin-top: 20px;
+    margin-top: 10px; /* Adjusted margin for less space */
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Adds space between term items */
+    gap: 15px; /* Adds space between term items */
 }
 
 .term-item {
     background: white;
     padding: 10px;
-    margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ff69b4;
     flex-shrink: 0;
@@ -73,11 +74,13 @@ h1 {
 .term-item h2 {
     margin: 0;
     color: #ff69b4;
+    font-size: 1.2em; /* Slightly larger term title */
 }
 
 .term-item p {
-    margin: 0;
+    margin: 5px 0 0; /* Adds slight space between term and description */
     color: #0078D4;
+    font-size: 0.95em; /* Slightly larger description text */
 }
 
 /* Hide the scrollbar for a cleaner look */
