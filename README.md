@@ -6,6 +6,7 @@ terms-list
 ========
 
 I was super tired of my 320+ page, 64k word document for learning. It was hard to keep track of terms and if I repeated them and hard to access mobile. So I threw them into a little gh page.
+Now terms-list has a search bar that searches the terms (not the definitions) and links to other projects in my ecosystem of little GitHub pages.
 
 How To Submit
 ===============
